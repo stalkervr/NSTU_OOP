@@ -2,63 +2,66 @@
 #include <iostream>
 #include "Complex.h"
 
-Complex::Complex(double _re, double _im) {
-	std::cout << "Конструктор с параметрами №1\n";
+// Конструктор с параметрами 
+Complex::Complex(double _re = 0, double _im = 0) {
+	std::cout << "Конструктор с параметрами  " << this << std::endl;
 	re = _re;
 	im = _im;
-	//number = std::to_string(re) + " , " + std::to_string(im);
-	number_1 = toSring(re, im);
+	number = toSring(re, im);
+}
 
-};
-Complex::Complex(double _re) {
-	std::cout << "Конструктор с параметрами №2\n";
-	re = _re;
-	im = 0.0f;
-	//number = std::to_string(_re) + " , " + std::to_string(im);
-	number_1 = toSring(re, im);
-	//char* pointer;
-};
+// Конструктор без параметров
 Complex::Complex() {
-	std::cout << "Конструктор без параметров\n";
-	re = im = 0.0f;
-	//number = std::to_string(re) + " , " + std::to_string(im);
-	number_1 = toSring(re, im);
-};
+	std::cout << "Конструктор без параметров  " << this << std::endl;
+	re = im = 0.0;
+	number = toSring(re, im);
+}
+
+ //Конструктор копирования
+Complex::Complex(const Complex &object)
+{
+	std::cout << "Конструктор копирования  " << this << std::endl;
+	this->re = object.re;
+	this->im = object.im;
+	this->number = _strdup(object.number);
+}
+;
+// Деструктор
 Complex::~Complex()
 {
-	std::cout << "Вызов деструктора\n";
-	//delete re;
-	//delete im;
-	//delete &number;
-};
-
-
-
-Complex Complex::addition(Complex a1, Complex a2)
-{
-	return Complex(a1.re + a2.re, a1.im + a2.im);
+	/*if (number) 
+		delete[] number;
+	number = nullptr;*/
+	std::cout << "Вызов деструктора  " << this << std::endl;
 }
 
-Complex Complex::subtraction(Complex a1, Complex a2)
+
+// Методы
+Complex Complex::addition(const Complex& a1, const Complex& a2)
 {
-	return Complex(a1.re - a2.re, a1.im - a2.im);
+	return Complex (a1.re + a2.re, a1.im + a2.im); 
 }
 
-Complex Complex::multiplication(Complex a1, Complex a2)
+Complex Complex::subtraction(const Complex& a1, const Complex& a2)
 {
-	return Complex((a1.re * a2.re - a1.im * a2.im) + (a1.re * a2.im + a2.re * a1.im));
+	return Complex (a1.re - a2.re, a1.im - a2.im);
 }
 
-Complex Complex::division(Complex a1, Complex a2)
+Complex Complex::multiplication(const Complex& a1, const Complex& a2)
 {
-	return Complex(((a1.re * a2.re + a1.im * a2.im) + (a2.re * a1.im - a1.re * a2.im)) / ((a2.re * a2.re) + (a2.im * a2.im)));
+	return Complex ((a1.re * a2.re - a1.im * a2.im) + (a1.re * a2.im + a2.re * a1.im));
+}
+
+Complex Complex::division(const Complex& a1, const Complex& a2)
+{
+	return Complex (((a1.re * a2.re + a1.im * a2.im) + (a2.re * a1.im - a1.re * a2.im)) / ((a2.re * a2.re) + (a2.im * a2.im)));
 }
 
 void Complex::print()
+
 {
-	//std::cout << "( " << re << "  " << im << " )\n";
-	//std::cout << number << "\n";
-	std::cout << "( " << number_1 << " )\n";
+	//std::cout << "( " << re << " + " << im << "*i )\n";
+	std::cout << "( " << number << " )\n\n";
 }
 
 char* Complex::toSring(double _re, double _im)

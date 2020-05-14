@@ -5,20 +5,22 @@ class Complex
 {
 	double re;
 	double im;
-	//std::string number;
-	char* number_1;
+	char* number;
 
 public:
+	// Конструкторы
 	Complex(double _re, double _im);
-	Complex(double _re);
 	Complex();
+	Complex(const Complex &object);
 
+	// Деструктор
 	~Complex();
 
-	Complex addition(Complex, Complex);
-	Complex subtraction(Complex, Complex);
-	Complex multiplication(Complex, Complex);
-	Complex division(Complex, Complex);
+	// Методы
+	Complex addition(const Complex&, const Complex&);
+	Complex subtraction(const Complex&, const Complex&);
+	Complex multiplication(const Complex&, const Complex&);
+	Complex division(const Complex&, const Complex&);
 	void print();
 	char* toSring(double, double);
 };
