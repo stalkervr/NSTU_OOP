@@ -14,5 +14,7 @@ public:
 	friend complex operator- (complex);
 	friend complex operator* (complex, complex);
 	friend complex operator/ (complex, complex);
+
+	void print();
 };
 
