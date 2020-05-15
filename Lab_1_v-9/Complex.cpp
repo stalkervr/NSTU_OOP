@@ -11,6 +11,7 @@ Complex::Complex(double _re = 0, double _im = 0) {
 	number = new char[50];
 	char* _number = toSring(re, im);
 	strcpy(number, _number);
+	delete[]_number;
 	count++;
 }
 
@@ -21,11 +22,12 @@ Complex::Complex() {
 	number = new char[50];
 	char* _number = toSring(re, im);
 	strcpy(number, _number);
+	delete[]_number;
 	count++;
 }
 
  //Конструктор копирования
-Complex::Complex(const Complex &object)
+Complex::Complex(const Complex& object)
 {
 	std::cout << "Конструктор копирования  " << this << std::endl;
 	re = object.re;
