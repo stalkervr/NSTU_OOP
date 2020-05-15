@@ -6,6 +6,7 @@ class Complex
 	double re;
 	double im;
 	char* number;
+	static int count;
 
 public:
 	// Конструкторы
@@ -17,11 +18,12 @@ public:
 	~Complex();
 
 	// Методы
-	Complex addition(const Complex&, const Complex&);
-	Complex subtraction(const Complex&, const Complex&);
-	Complex multiplication(const Complex&, const Complex&);
-	Complex division(const Complex&, const Complex&);
+	void addition(const Complex&, const Complex&);
+	void subtraction(const Complex&, const Complex&);
+	void multiplication(const Complex&, const Complex&);
+	void division(const Complex&, const Complex&);
 	void print();
 	char* toSring(double, double);
+	static void Numobject();
 };
 
