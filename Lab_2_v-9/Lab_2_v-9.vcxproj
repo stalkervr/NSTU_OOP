@@ -147,11 +147,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="complex.cpp" />
+    <ClCompile Include="Complex.cpp" />
     <ClCompile Include="Lab_2_v-9.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="complex.h" />
+    <ClInclude Include="Complex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

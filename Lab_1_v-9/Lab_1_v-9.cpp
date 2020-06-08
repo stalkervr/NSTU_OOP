@@ -1,7 +1,4 @@
-﻿#include <iostream>
-#include "Complex.h"
-#include <locale>
-
+﻿#include "Complex.h"
 
 int main()
 {
@@ -60,4 +57,5 @@ int main()
     Complex::Numobject();
 
     _getwch();
+    return 0;
 }

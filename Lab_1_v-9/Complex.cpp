@@ -1,17 +1,14 @@
-#pragma warning(disable : 4996)
-#include <iostream>
 #include "Complex.h"
-#include <string>
 
 // Конструктор с параметрами 
 Complex::Complex(double _re = 0, double _im = 0) {
 	std::cout << "Конструктор с параметрами  " << this << std::endl;
 	re = _re;
 	im = _im;
-	number = new char[50];
 	char* _number = toSring(re, im);
+	number = new char[strlen(_number) + 1];
 	strcpy(number, _number);
-	delete[]_number;
+	delete[] _number;
 	count++;
 }
 
@@ -19,10 +16,10 @@ Complex::Complex(double _re = 0, double _im = 0) {
 Complex::Complex() {
 	std::cout << "Конструктор без параметров  " << this << std::endl;
 	re = im = 0.0;
-	number = new char[50];
 	char* _number = toSring(re, im);
+	number = new char[strlen(_number) + 1];
 	strcpy(number, _number);
-	delete[]_number;
+	delete[] _number;
 	count++;
 }
 
