@@ -45,32 +45,32 @@ Complex::~Complex()
 
 
 // Ìועמהû
- void Complex::addition(const Complex& a1, const Complex& a2)
+ void Complex::addition(const Complex& a2)
 {
-	 this->re = a1.re + a2.re;
-	 this->im = a1.im + a2.im;
-	 this->number = toSring(re, im);
+	 re = re + a2.re;
+	 im = im + a2.im;
+	 number = toSring(re, im);
 }
 
-void Complex::subtraction(const Complex& a1, const Complex& a2)
+void Complex::subtraction(const Complex& a2)
 {
-	this->re = a1.re - a2.re;
-	this->re = a1.im - a2.im;
-	this->number = toSring(re, im);
+	re = re - a2.re;
+	im = im - a2.im;
+	number = toSring(re, im);
 }
 
-void Complex::multiplication(const Complex& a1, const Complex& a2)
+void Complex::multiplication(const Complex& a2)
 {
-	this->re = (a1.re * a2.re - a1.im * a2.im);
-	this->im =	(a1.re * a2.im + a2.re * a1.im);
-	this->number = toSring(re, im);
+	re = (re * a2.re - im * a2.im);
+	im =	(re * a2.im + a2.re * im);
+	number = toSring(re, im);
 }
 
-void Complex::division(const Complex& a1, const Complex& a2)
+void Complex::division(const Complex& a2)
 {
-	this->re = (a1.re * a2.re + a1.im * a2.im) / ((a2.re * a2.re) + (a2.im * a2.im));
-	this->im = (a2.re * a1.im - a1.re * a2.im) / ((a2.re * a2.re) + (a2.im * a2.im));
-	this->number = toSring(re, im);
+	re = (re * a2.re + im * a2.im) / ((a2.re * a2.re) + (a2.im * a2.im));
+	im = (a2.re * im - re * a2.im) / ((a2.re * a2.re) + (a2.im * a2.im));
+	number = toSring(re, im);
 }
 
 void Complex::print()

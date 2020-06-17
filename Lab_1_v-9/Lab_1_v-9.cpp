@@ -18,27 +18,27 @@ int main()
     std::cout << "Количество объектов =  ";
     Complex::Numobject();
 
-    x.addition(a1, a2);
+    a1.addition(a2);
     std::cout << "Сложение  ";
-    x.print();
+    a1.print();
     std::cout << "Количество объектов =  ";
     Complex::Numobject();
 
-    x.subtraction(a1, a2);
+    a1.subtraction(a2);
     std::cout << "Вычитание  ";
-    x.print();
+    a1.print();
     std::cout << "Количество объектов =  ";
     Complex::Numobject();
 
-    x.multiplication(a1, a2);
+    a1.multiplication(a2);
     std::cout << "Умножение  ";
-    x.print();
+    a1.print();
     std::cout << "Количество объектов =  ";
     Complex::Numobject();
 
-    x.division(a1, a2);
+    a1.division(a2);
     std::cout << "Деление  ";
-    x.print();
+    a1.print();
     std::cout << "Количество объектов =  ";
     Complex::Numobject();
     

@@ -1,4 +1,4 @@
-#include "Complex.h"
+#include "complex.h"
 
 // Конструктор с параметрами 
 Complex::Complex(double _re = 0, double _im = 0) {
@@ -46,6 +46,8 @@ Complex::~Complex()
 // Методы доступа к полям
 double Complex::getRe() { return re; }
 double Complex::getIm() { return im; }
+void Complex::setRe(double _re) { re = _re; }
+void Complex::setIm(double _im) { im = _im; }
 
 #pragma region // Методы
 // Методы
@@ -73,7 +75,7 @@ void Complex::multiplication(const Complex& a2)
 void Complex::division(const Complex& a2)
 {
 	re = (re * a2.re + im * a2.im) / ((a2.re * a2.re) + (a2.im * a2.im));
-	this->im = (a2.re * im - re * a2.im) / ((a2.re * a2.re) + (a2.im * a2.im));
+	im = (a2.re * im - re * a2.im) / ((a2.re * a2.re) + (a2.im * a2.im));
 	this->number = toSring(re, im);
 }
 
@@ -108,7 +110,7 @@ void Complex::Numobject()
 
 #pragma region Переопределение операторов методы класса
 // Переопределение операторов методы класса
-Complex& Complex::operator=(const Complex& object) 
+Complex& Complex::operator=(const Complex& object)
 {
 	if (number != NULL) delete[]number;
 	re = object.re;
@@ -118,7 +120,7 @@ Complex& Complex::operator=(const Complex& object)
 }
 
 Complex Complex::operator+(const Complex& a2)
-{   
+{
 	Complex rez(0.0, 0.0);
 	rez.re = re + a2.re;
 	rez.im = im + a2.im;
@@ -205,7 +207,8 @@ istream& operator>>(istream& is, Complex& a1)
 	char* ptrEnd;
 	a1.re = strtod(temp, &ptrEnd);
 	a1.im = strtod(ptrEnd, NULL);
-	a1.number = a1.toSring(a1.re,a1.im);
+	a1.number = a1.toSring(a1.re, a1.im);
 	return is;
 }
 #pragma endregion
+

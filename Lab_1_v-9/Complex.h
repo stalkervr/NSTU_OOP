@@ -20,10 +20,10 @@ public:
 	~Complex();
 
 	// Ìועמהû
-	void addition(const Complex&, const Complex&);
-	void subtraction(const Complex&, const Complex&);
-	void multiplication(const Complex&, const Complex&);
-	void division(const Complex&, const Complex&);
+	void addition(const Complex&);
+	void subtraction(const Complex&);
+	void multiplication(const Complex&);
+	void division(const Complex&);
 	void print();
 	char* toSring(double, double);
 	static void Numobject();
