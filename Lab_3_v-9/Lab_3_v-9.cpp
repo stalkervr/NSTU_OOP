@@ -56,13 +56,14 @@ int main()
     cout << "  Вы ввели число ->  " << a5 << endl;
     cout << "  Тригенометрическая форма числа ->  " << a5() << endl;*/
 
-    T_Complex obj;
-    T_Complex obj_1(5,3);
-    //obj = obj + obj_1;
-
+    T_Complex obj(1,2);
+    T_Complex obj1(5.0,3.0);
+    T_Complex obj2 = obj1;
+    obj2.data.setdate(18,25,30);
+    //char* text = obj_1.toSring();
     cout << "  Перегрузка оператора вызова функции класса Complex  " << endl;
     cout << "  как операции получения тригенометрической формы числа \n  вызов y()\n" << endl;
-    cout << "  " << obj_1.getNumber() << endl;
+    cout << "  " << obj2.data << endl;
     _getwch();
     return 0;
 }

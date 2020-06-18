@@ -2,7 +2,7 @@
 
 // Конструктор с параметрами 
 Complex::Complex(double _re = 0, double _im = 0) {
-	//std::cout << "Конструктор с параметрами  " << this << std::endl;
+	std::cout << "Конструктор с параметрами  " << this << std::endl;
 	re = _re;
 	im = _im;
 	char* _number = toSring(re, im);
@@ -14,7 +14,7 @@ Complex::Complex(double _re = 0, double _im = 0) {
 
 // Конструктор без параметров
 Complex::Complex() {
-	//std::cout << "Конструктор без параметров  " << this << std::endl;
+	std::cout << "Конструктор без параметров  " << this << std::endl;
 	re = im = 0.0;
 	char* _number = toSring(re, im);
 	number = new char[strlen(_number) + 1];
@@ -26,7 +26,7 @@ Complex::Complex() {
 //Конструктор копирования
 Complex::Complex(const Complex& object)
 {
-	//std::cout << "Конструктор копирования  " << this << std::endl;
+	std::cout << "Конструктор копирования  " << this << std::endl;
 	re = object.re;
 	im = object.im;
 	number = _strdup(object.number);

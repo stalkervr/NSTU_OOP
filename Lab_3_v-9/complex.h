@@ -6,8 +6,6 @@
 #include <cstdlib>
 #include <cmath>
 #include <ctime>
-
-
 using namespace std;
 
 class Complex
@@ -62,10 +60,10 @@ public:
 		void getdate() {
 			cout << day << "/" << mon << "/" << year<< " "<<hour<<"."<<min<<"."<<sec << endl;
 		}
-		void setdate(int day, int mon, int year) {
-			this->day = day;
-			this->mon = mon;
-			this->year = year;
+		void setdate(int hour, int min, int sec) {
+			this->hour = hour;
+			this->min = min;
+			this->sec = sec;
 		}
 
 		friend ostream& operator<<(ostream& os, const Data& dt) {
