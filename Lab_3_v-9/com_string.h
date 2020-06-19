@@ -7,7 +7,7 @@
 class ComString : public Complex
 {
 	char* str_number_math;
-	char* str_number_geom;
+	//char* str_number_geom;
 
 public:
 	class ParamExeption {

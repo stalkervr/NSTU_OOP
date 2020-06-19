@@ -24,10 +24,10 @@
     <ClCompile Include="t_complex.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="date.cpp">
+    <ClCompile Include="com_string.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="com_string.cpp">
+    <ClCompile Include="com_date.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,10 +38,10 @@
     <ClInclude Include="t_complex.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="date.h">
+    <ClInclude Include="com_string.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="com_string.h">
+    <ClInclude Include="com_date.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

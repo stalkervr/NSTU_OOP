@@ -149,14 +149,14 @@
   <ItemGroup>
     <ClCompile Include="complex.cpp" />
     <ClCompile Include="com_string.cpp" />
-    <ClCompile Include="date.cpp" />
+    <ClCompile Include="com_date.cpp" />
     <ClCompile Include="Lab_3_v-9.cpp" />
     <ClCompile Include="t_complex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="complex.h" />
     <ClInclude Include="com_string.h" />
-    <ClInclude Include="date.h" />
+    <ClInclude Include="com_date.h" />
     <ClInclude Include="t_complex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

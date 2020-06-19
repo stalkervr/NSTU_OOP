@@ -23,6 +23,7 @@ int main()
 
     if (obj4)
         cout << *obj4;
+
     do {
         try {
             cin >> obj3;

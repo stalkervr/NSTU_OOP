@@ -23,7 +23,7 @@ ComString::ComString() :Complex()
 	delete[] _str_number_math;
 }
 
-ComString::ComString(double _re = 0, double _im = 0) :Complex(_re, _im)
+ComString::ComString(double _re, double _im) :Complex(_re, _im)
 {
 	std::cout << " онструктор с параметрами наследника  " << this << std::endl;
 	char* _str_number_math = toSring(_re, _im);
