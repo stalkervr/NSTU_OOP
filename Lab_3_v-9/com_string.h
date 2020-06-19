@@ -1,32 +1,31 @@
 #pragma once
-
 #include "complex.h"
-
 //  Задание.
 //  класс, хранящий число так же в виде строки и 
 //  имеющий методы перевода строки в чис-ло и назад;
-//  дополнить класс с датой создания объекта. 
-
-class T_Complex : public Complex
+//  дополнить класс с датой создания объекта.
+class ComString : public Complex
 {
-	char* t_number;
-	
-public:
-//	// Вложенный класс
-//	class ParamExeption {
-//	public:
-//		int pas;
-//		ParamExeption(int pas) {
-//			this->pas = pas;
-//		}
-//	};
+	char* str_number_math;
+	char* str_number_geom;
 
-	// Конструкторы
-	T_Complex();
-	T_Complex(double, double);
-	T_Complex(const T_Complex&);
-	// Деструктор
-	~T_Complex();
+public:
+	class ParamExeption {
+	public:
+		int day, mon, year, hour, min, sec;
+
+		ParamExeption(int day) {
+			this->day = day;
+		}
+	};
+
+	// конструкторы
+	ComString();
+	ComString(double, double);
+	ComString(const ComString&);
+
+	// деструктор
+	~ComString();
 
 	// Методы доступа к полям
 	char* getNumber();
@@ -37,14 +36,14 @@ public:
 	//char* toSring(double, double);
 
 	// Переопределение операторов
-	T_Complex& operator= (const T_Complex&);
-	T_Complex operator+ (const T_Complex&);
+	ComString& operator= (const ComString&);
+	ComString operator+ (const ComString&);
 
-	friend ostream& operator<<(ostream&, const T_Complex&);
+	friend ostream& operator<<(ostream&, const ComString&);
 	//
 	//friend ostream& operator<<(ostream& os, const T_Complex& object);
 	//friend istream& operator>>(istream& is, T_Complex& object);
+
+
 };
-
-
 

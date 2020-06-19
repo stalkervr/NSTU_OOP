@@ -1,12 +1,12 @@
 ﻿#include "complex.h"
-#include "t_complex.h"
+
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    cout << "  Демонстрация перегрузок операторов для класса Complex  " << endl;
-    cout << endl;
+    cout << "  Лабораторная работа № 3  " << endl;
+    /*cout << endl;
     Complex a1(10.4, 6.6);
     Complex a2(5.2, 3.3);
     Complex a3, a4;
@@ -49,21 +49,19 @@ int main()
     cout << "  Перегрузка оператора вызова функции класса Complex  " << endl;
     cout << "  как операции получения тригенометрической формы числа \n  вызов a1()\n" << endl;
     cout << "  " << a1() << endl;
-    cout << "\n  Перегрузка оператора входного потока класса Complex  \n" << endl;
+    cout << "\n  Перегрузка оператора входного потока класса Complex  \n" << endl;*/
     /*Complex a5;
     cout << "  Введите комплексноечисло в виде -> ""8,1+5,2*i""  ->  " << endl;
     cin >> a5;
     cout << "  Вы ввели число ->  " << a5 << endl;
     cout << "  Тригенометрическая форма числа ->  " << a5() << endl;*/
 
-    T_Complex obj(1,2);
-    T_Complex obj1(5.0,3.0);
-    T_Complex obj2 = obj1;
-    obj2.data.setdate(18,25,30);
+   
+    Complex obj5(6, 7);
     //char* text = obj_1.toSring();
-    cout << "  Перегрузка оператора вызова функции класса Complex  " << endl;
-    cout << "  как операции получения тригенометрической формы числа \n  вызов y()\n" << endl;
-    cout << "  " << obj2.data << endl;
+    cout << "  Перегрузка оператора = класса T_Complex  " << endl;
+    cout << "  установка даты \n  вызов y()\n" << endl;
+    cout << "  " << obj5 << endl;
     _getwch();
     return 0;
 }

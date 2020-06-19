@@ -1,5 +1,4 @@
-#pragma once
-#include "t_complex.h"
+#include "com_string.h"
 //#include "complex.h"
 // Для класса предыдущей лабораторной работы реализовать иерархию классов - наследников, 
 // перегрузив в них отдельные методы и добавляя члены - данные и методы по заданию
@@ -15,68 +14,68 @@
 
 
 // Конструктор без параметров
-T_Complex::T_Complex():Complex()
+ComString::ComString() :Complex()
 {
 	std::cout << "Конструктор без параметров наследника  " << this << std::endl;
-	char* _t_number = toSring(0, 0);
-	t_number = new char[strlen(_t_number) + 1];
-	strcpy(t_number, _t_number);
-	delete[] _t_number;
+	char* _str_number_math = toSring(0, 0);
+	str_number_math = new char[strlen(_str_number_math) + 1];
+	strcpy(str_number_math, _str_number_math);
+	delete[] _str_number_math;
 }
 
-T_Complex::T_Complex(double _re = 0, double _im = 0):Complex(_re,_im)
+ComString::ComString(double _re = 0, double _im = 0) :Complex(_re, _im)
 {
 	std::cout << "Конструктор с параметрами наследника  " << this << std::endl;
-	char* _t_number = toSring(_re, _im);
-	t_number = new char[strlen(_t_number) + 1];
-	strcpy(t_number, _t_number);
-	delete[] _t_number;
+	char* _str_number_math = toSring(_re, _im);
+	str_number_math = new char[strlen(_str_number_math) + 1];
+	strcpy(str_number_math, _str_number_math);
+	delete[] _str_number_math;
 }
 
 // Конструктор копирования
-T_Complex::T_Complex(const T_Complex& object):Complex()
+ComString::ComString(const ComString& object) :Complex()
 {
 	std::cout << "Конструктор копирования наследника  " << this << std::endl;
 	re = object.re;
 	im = object.im;
-	t_number = _strdup(object.t_number);
+	str_number_math = _strdup(object.str_number_math);
 }
 
 // Деструктор
-T_Complex::~T_Complex()
+ComString::~ComString()
 {
-	if (t_number)
-		delete[] t_number;
-	t_number = nullptr;
+	if (str_number_math)
+		delete[] str_number_math;
+	str_number_math = nullptr;
 }
 
 // Методы доступа к полям класса
-char* T_Complex::getNumber() { return t_number; }
+char* ComString::getNumber() { return str_number_math; }
 
 
- //Переопределение операторов
-T_Complex& T_Complex::operator=(const T_Complex& object)
+//Переопределение операторов
+ComString& ComString::operator=(const ComString& object)
 {
-	std::cout << "= из T_Complex  " << this << std::endl;
-	if (t_number != NULL) delete[]t_number;
+	std::cout << "= из ComString  " << this << std::endl;
+	if (str_number_math != NULL) delete[]str_number_math;
 	re = object.re;
 	im = object.im;
-	t_number = _strdup(object.t_number);
+	str_number_math = _strdup(object.str_number_math);
 	return *this;
 }
 
-T_Complex T_Complex::operator+(const T_Complex& a2)
+ComString ComString::operator+(const ComString& a2)
 {
-	std::cout << "+ из T_Complex  " << this << std::endl;
-	T_Complex rez(0.0, 0.0);
+	std::cout << "+ из ComString  " << this << std::endl;
+	ComString rez(0.0, 0.0);
 	rez.re = re + a2.re;
 	rez.im = im + a2.im;
-	rez.t_number = toSring(rez.re, rez.im);
+	rez.str_number_math = toSring(rez.re, rez.im);
 	return rez;
 }
 
-ostream& operator<<(ostream& os, const T_Complex& a1)
+ostream& operator<<(ostream& os, const ComString& a1)
 {
-	os << a1.t_number;
+	os << a1.str_number_math;
 	return os;
 }

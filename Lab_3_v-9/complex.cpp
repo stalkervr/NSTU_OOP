@@ -46,8 +46,10 @@ Complex::~Complex()
 // Методы доступа к полям
 double Complex::getRe() { return re; }
 double Complex::getIm() { return im; }
-void Complex::setRe(double _re) { re = _re; }
-void Complex::setIm(double _im) { im = _im; }
+char* Complex::getNumberComplex() { return number; }
+//void Complex::setRe(double _re) { re = _re; }
+//void Complex::setIm(double _im) { im = _im; }
+
 
 #pragma region // Методы
 // Методы
