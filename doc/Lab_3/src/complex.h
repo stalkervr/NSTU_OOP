@@ -11,12 +11,12 @@ using namespace std;
 
 class Complex
 {
-	char* number;
 	static int count;
 	
 protected:
 	double re;
 	double im;
+	char* number;
 
 public:
 	// Конструкторы
@@ -31,8 +31,7 @@ public:
 	double getRe();
 	double getIm();
 	char* getNumberComplex();
-	void setRe(double _re);
-	void setIm(double _im);
+
 	// Методы
 	void addition(const Complex&);
 	void subtraction(const Complex&);
@@ -56,11 +55,3 @@ public:
 	friend ostream& operator<<(ostream&, const Complex&);
 	friend istream& operator>>(istream&, Complex&);
 };
-
-
-
-
-
-
-
-

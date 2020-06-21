@@ -10,9 +10,9 @@ public:
  //Вложенный класс
 	class ParamExeption {
 
-		int day, mon, year;
-
 	public:
+
+		int day, mon, year;
 
 		ParamExeption(int day, int mon, int year) {
 			this->day = day;
@@ -24,7 +24,6 @@ public:
 	// конструкторы
 	Date();
 	Date(double _re, double _im, int _day, int _mon, int _year) throw (ParamExeption);
-	//Date(double,double,int,int,int) throw (ParamExeption);
 	Date(const Date& object);
 
 	// деструктор
