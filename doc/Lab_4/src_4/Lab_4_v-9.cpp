@@ -64,13 +64,6 @@ int main()
     print_line();
     cout << endl;
 
-    cout << "  Поиск по индексу " << endl;
-    list_1.findByIndex(2);
-    //list_1.show();
-    print_line();
-    cout << endl;
-
-
     cout << "  Ввод данных в элемент по индексу 0 " << endl;
     list_1.input(0);
     list_1.show();

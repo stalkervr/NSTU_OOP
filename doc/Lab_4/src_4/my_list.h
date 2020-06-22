@@ -23,10 +23,6 @@ public:
     void clear(); // удаление всех элементов списка
     int GetSize(); // количество элементов
 
-
-    void findByIndex(int index);
-    //void printOneItem(T* data);
-
     void show(); // просмотр всей структуры
     void input(int n); // изменение элемента по индексу
 
@@ -171,33 +167,6 @@ int List<T>::GetSize()
 {
     return Size;
 }
-template<typename T>
-inline void List<T>::findByIndex(int index)
-{
-    if (index == 0)
-    {
-        if (head) {
-            head->data->Show(cout);
-        }
-        
-    }
-    else
-    {
-        Node<T>* current = this->head;
-        int i = 0;
-        while (i != index)
-        {
-            current = current->pNext;
-            i++;
-        }
-        current->data->Show(cout);
-    }
-    
-}
-//template<typename T>
-//inline void List<T>::printOneItem(T* data)
-//{
-//}
 // просмотр всей структуры
 template<typename T>
 inline void List<T>::show()
